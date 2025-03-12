@@ -18,22 +18,43 @@
         }
 
         header {
-            background: #000; /* Cintillo negro */
+            background: #000;
             color: #fff;
             padding: 1.5rem;
-            text-align: left;
-            position: fixed; /* Hace que el cintillo sea siempre visible */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Añade una sombra para destacar el cintillo */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        header h1 {
+        header h3 {
             font-weight: 600;
             font-size: 24px;
             margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.3);
         }
 
         section {
@@ -73,14 +94,103 @@
 </head>
 <body>
     <header>
-        <h3>Monitoreo de medios</h3>
+        <h4>Monitoreo de medios</h4>
+        <nav>
+            <a href="#resumen-diario">Resumen Diario</a>
+            <a href="#tablero-tableau">Tablero de Presencia en medios</a>
+        </nav>
     </header>
 
-    <section>
-        <h4>Este tablero refleja un monitoreo de la presencia en medios de comunicación digitales del Presidente Gustavo Petro.</h4>
-        <div class='tableauPlaceholder' id='viz1741742673488' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pe&#47;Petro1&#47;Historia1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Petro1&#47;Historia1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pe&#47;Petro1&#47;Historia1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1741742673488');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1400px';vizElement.style.height='850px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        <p>Aquí puedes añadir más texto o análisis basado en los datos de los tableros anteriores.</p>
-    </section>
+    <section id="resumen-diario">    
+        <br>
+        <br>
+        <br>
+        <br>
+        <h4>Resumen Diario</h4>
+        <table border='1' style='width: 100%; text-align: left; border-collapse: collapse;'>
+            <thead>
+                <tr>
+                    <th style='padding: 8px; background-color: #000; color: white;'>Fecha</th>
+                    <th style='padding: 8px; background-color: #000; color: white;'>Resumen</th>
+                    <th style='padding: 8px; background-color: #000; color: white;'>Nube de Palabras</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style='padding: 8px;'>21/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la tensión entre el gobierno de Gustavo Petro y la Corte Constitucional, luego de que el alto tribunal rechazara nuevamente su invitación a una reunión, argumentando la necesidad de mantener su independencia y evitar compromisos con el Ejecutivo. Además, se destacaron noticias sobre el futuro del Tratado de Libre Comercio con Estados Unidos, con nuevas declaraciones del presidente sobre la posibilidad de revisarlo, lo que generó reacciones inmediatas de sectores económicos y empresariales. Finalmente, hubo un enfoque en los cambios en el Ministerio de Defensa, donde el gobierno confirmó la llegada de un general activo como nuevo ministro, rompiendo con una tradición de más de 30 aÃ±os en la que el cargo había sido ocupado por civiles.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.21_6.07pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>22/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la polémica declaración de Gustavo Petro sobre la motosierra que Javier Milei regaló a Elon Musk, donde el presidente colombiano comparó este gesto con el uso de motosierras en Colombia para descuartizar personas en el conflicto armado, lo que generó fuertes reacciones tanto en Argentina como en sectores polí­ticos colombianos. Además, Petro anunció la firma del Pacto por la Tierra y la Vida en el Tolima, con el objetivo de entregar tierras expropiadas a campesinos, mientras que en materia de seguridad nombró un nuevo jefe de seguridad personal, en medio de preocupaciones por su protección y la de su familia. Finalmente, el mandatario criticó el Tratado de Libre Comercio (TLC) con Estados Unidos, argumentando que ha perjudicado la industria nacional, lo que provocó respuestas inmediatas de gremios empresariales y polí­ticos, quienes advirtieron sobre los riesgos de alterar las relaciones comerciales con el principal socio económico del paí­s.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.22_2.22pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>23/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la controversia en torno a la relación de Gustavo Petro con el criminal 'Papá Pitufo', después de que se revelara que el presidente habí­a viajado en un avión vinculado al contrabandista sin conocer su procedencia, lo que desató críticas sobre la seguridad y transparencia del gobierno. Además, se generaron debates en torno a las declaraciones de Petro sobre la crisis política en el paí­s, en las que acusó a ciertos sectores de intentar debilitar su gobierno Finalmente, se discutieron las tensiones entre el Ejecutivo y la rama judicial, con nuevas fricciones entre Petro y la Corte Constitucional, luego de que varios magistrados se negaran a reunirse con él, alegando la necesidad de preservar su independencia.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.23_7.42pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>24/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la controversia en torno a la presunta influencia de Gustavo Petro en decisiones judiciales, luego de que varios sectores denunciaran intentos de presión desde el Ejecutivo para incidir en fallos clave, lo que generó un fuerte rechazo en la oposición y advertencias sobre la separación de poderes. Además, se destacaron noticias sobre la continuidad del gobierno en la entrega de tierras a campesinos, con la formalización de nuevos procesos de adjudicación en varias regiones del paÍs, en medio de cuestionamientos sobre la transparencia en la selección de beneficiarios. Finalmente, la opinión pública reaccionó a unas declaraciones informales del presidente en un evento privado, donde hizo comentarios polémicos sobre su relación con líderes polí­ticos, lo que desató una ola de especulaciones sobre posibles alianzas y tensiones internas en su círculo cercano.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.24_6.13pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>25/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la polémica por la designación del nuevo ministro de Defensa, luego de que Gustavo Petro confirmara el nombramiento de un alto oficial en servicio activo, lo que generó crí­ticas sobre el impacto de esta decisión en la independencia civil sobre las Fuerzas Armadas. Además, se destacaron noticias sobre la estrategia del gobierno en la lucha contra la delincuencia y el narcotráfico, con el anuncio de nuevas medidas que incluyen una mayor coordinación con autoridades locales y refuerzos en zonas de alta conflictividad. Finalmente, hubo un enfoque en las tensiones dentro del propio Gobierno Petro, con reportes de diferencias entre algunos de sus ministros y cuestionamientos sobre la viabilidad de algunas de sus reformas clave en el Congreso.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.25_6.34pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>26/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la creciente presión sobre Gustavo Petro por las tensiones con el Congreso, luego de que varias bancadas expresaran su descontento con las últimas decisiones del Ejecutivo, lo que pone en duda la viabilidad de algunos proyectos clave. Además, se destacaron noticias sobre la respuesta del presidente a las críticas por su estrategia de seguridad, defendiendo su política y señalando que algunos sectores buscan desestabilizar su gobierno. Finalmente, hubo un enfoque en el impacto de las recientes reformas en la economí­a, con advertencias sobre posibles efectos negativos en la inversión y el crecimiento del paí­s.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.26_8.59pm.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+                <tr>
+                    <td style='padding: 8px;'>27/02/2025</td>
+                    <td style='padding: 8px;'>El tema central del día fue la controversia en torno a las declaraciones de Gustavo Petro sobre la independencia judicial, luego de que el presidente señalara que algunos jueces están actuando bajo presión de sectores políticos, lo que generó reacciones inmediatas de la rama judicial y la oposición. Además, se destacaron noticias sobre el endurecimiento de las tensiones entre el gobierno y el sector privado, con empresarios advirtiendo sobre los efectos negativos de las recientes políticas económicas en la inversión y el empleo. Finalmente, hubo un enfoque en la creciente incertidumbre sobre el futuro de las reformas gubernamentales, luego de que aliados del Ejecutivo en el Congreso manifestaran dudas sobre la viabilidad de algunos proyectos clave.</td>
+                    <td style='padding: 8px;'><img src='nube_de_palabras_2.27.png' alt='Nube de Palabras' style='max-width: 600px;'></td>
+                </tr>
+            </tbody>
+        </table>
+        <section id="tablero-tableau">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>Este tablero refleja un monitoreo de la presencia en medios de comunicación digitales del Presidente Gustavo Petro.</h4>
+            <div class='tableauPlaceholder' id='viz1741742673488' style='position: relative'>
+                <noscript>
+                    <a href='#'><img alt=' ' src='https://public.tableau.com/static/images/Pe/Petro1/Historia1/1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Petro1/Historia1' />
+                    <param name='tabs' value='yes' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/Pe/Petro1/Historia1/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='es-ES' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+        </section>    
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1741742673488');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='1400px';
+            vizElement.style.height='850px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        </section>
 
     <footer>
         <p>© 2025 Luis Daniel Santiago Vidargas<br> ldsantiagovidargas.93@gmail.com // (+52)55 41861761</p>
